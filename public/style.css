@@ -1,4 +1,4 @@
-/* Estilo geral da página */
+/* Estilos gerais */
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f2f5;
@@ -6,7 +6,7 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  padding: 20px; /* Para dar respiro em telas pequenas */
+  padding: 20px;
   box-sizing: border-box;
   overflow-y: auto;
 }
@@ -124,7 +124,7 @@ label {
   text-decoration: underline;
 }
 
-/* Formulário de exclusão dentro do card */
+/* Formulário de edição */
 .card form {
   margin-top: 12px;
 }
