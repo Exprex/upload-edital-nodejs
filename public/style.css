@@ -1,0 +1,147 @@
+/* Estilo geral da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Para dar respiro em telas pequenas */
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Títulos */
+h1,
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs e textarea */
+input[type="file"] {
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Botão enviar */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+/* Lista de editais - container dos cards */
+.cards {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* Cada card */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Título do card */
+.card h3 {
+  margin: 0 0 10px 0;
+  color: #222;
+  word-break: break-word;
+}
+
+/* Parágrafos */
+.card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Link para o PDF */
+.card a {
+  color: #007bff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Formulário de exclusão dentro do card */
+.card form {
+  margin-top: 12px;
+}
+
+/* Botão excluir */
+.card button {
+  background-color: #dc3545;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #b02a37;
+}

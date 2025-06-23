@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Painel Admin - Upload de Edital</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Upload de Edital</h1>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="pdfFile">Escolha um arquivo PDF:</label>
+        <input type="file" name="pdfFile" accept="application/pdf" required />
+
+        <label for="descricao">Descrição:</label>
+        <textarea
+          id="descricao"
+          name="descricao"
+          rows="4"
+          placeholder="Digite uma descrição aqui..."
+          required
+        ></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </body>
+</html>
