@@ -7,13 +7,13 @@ const app = express();
 const PORT = 3000;
 
 // Middleware de arquivos estáticos
-app.use("/uploads", express.static("uploads"));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
 // Configuração do Multer para upload
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, "uploads/"),
+  destination: (req, file, cb) => cb(null, path.join(__dirname, "uploads")),
   filename: (req, file, cb) => {
     const uniqueSuffix = Date.now() + path.extname(file.originalname);
     cb(null, file.originalname.replace(".pdf", "") + "-" + uniqueSuffix);
@@ -33,7 +33,7 @@ const upload = multer({
 
 // Rota principal: exibe formulário e lista PDFs da pasta
 app.get("/", (req, res) => {
-  fs.readdir("uploads", (err, files) => {
+  fs.readdir(path.join(__dirname, "uploads"), (err, files) => {
     if (err) {
       return res.status(500).send("Erro ao listar arquivos.");
     }
@@ -86,7 +86,8 @@ app.get("/", (req, res) => {
         </div>
       </div>
     </body>
-    </html>`;
+    </html>
+    `;
     res.send(html);
   });
 });
